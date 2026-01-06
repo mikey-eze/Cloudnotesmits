@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Cloud Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* ===== BACKGROUND ===== */
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at top left, #f7c66a, transparent 60%),
+        radial-gradient(circle at top right, #f3a6c8, transparent 60%),
+        radial-gradient(circle at bottom left, #b8b3f0, transparent 60%),
+        radial-gradient(circle at bottom right, #f4b183, transparent 60%);
+    }
+
+    /* ===== LOGIN CARD ===== */
+    .login-box {
+      background: #fff;
+      width: 100%;
+      max-width: 400px;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .login-box h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .login-box p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    /* ===== INPUTS ===== */
+    select,
+    input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      background: #fff;
+    }
+
+    select:focus,
+    input:focus {
+      outline: none;
+      border-color: #000;
+    }
+
+    /* ===== BUTTON ===== */
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #222;
+    }
+
+    /* ===== ERROR ===== */
+    .error {
+      margin-top: 12px;
+      color: red;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h1>Class Login</h1>
+    <p>Select your class to continue</p>
+
+    <!-- CLASS SELECT -->
+     <input type="text" id="studentName" placeholder="Your name">
+
+    <select id="classSelect">
+      <option value="">Select your class</option>
+      <option value="CSE-E">CSE-E</option>
+    </select>
+
+    <!-- CLASS PASSWORD -->
+    <input type="password" id="classCode" placeholder="Class password">
+
+    <button onclick="login()">Continue</button>
+
+    <div class="error" id="error"></div>
+
+    <footer>© 2025 Cloud Notes</footer>
+  </div>
+
+<script>
+  function login() {
+    const name = document.getElementById("studentName").value.trim();
+    const selectedClass = document.getElementById("classSelect").value;
+    const enteredPassword = document.getElementById("classCode").value;
+    const error = document.getElementById("error");
+
+    error.innerText = "";
+
+    if (name === "") {
+      error.innerText = "Please enter your name";
+      return;
+    }
+
+    if (selectedClass === "") {
+      error.innerText = "Please select your class";
+      return;
+    }
+
+    const CSE_PASSWORD = "CSE2025";
+
+    if (selectedClass === "CSE-E" && enteredPassword === CSE_PASSWORD) {
+      localStorage.setItem("studentName", name);
+      window.location.href = "cse-e.html";
+    } else {
+      error.innerText = "Wrong class password";
+    }
+  }
+</script>
+
+
+</body>
+</html>

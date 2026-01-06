@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C Language | Cloud Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, #f7c66a, transparent 60%),
+        radial-gradient(circle at top right, #f3a6c8, transparent 60%),
+        radial-gradient(circle at bottom left, #b8b3f0, transparent 60%),
+        radial-gradient(circle at bottom right, #f4b183, transparent 60%);
+      color: #111;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 36px;
+    }
+
+    .navbar nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+    }
+
+    /* ===== HEADER ===== */
+   .page-header {
+  text-align: center;
+  padding: 60px 20px 30px; /* ⬅ reduced top padding */
+}
+
+.page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 17px;
+  color: #444;
+}
+
+
+    /* ===== CONTENT ===== */
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 60px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+ .card {
+  background: #fff;
+  padding: 40px 30px;   /* ⬅ more vertical space */
+  border-radius: 18px;  /* softer look */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 14px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">CloudNotes</div>
+
+
+    <div></div>
+  </header>
+
+  <!-- HEADER -->
+  <section class="page-header">
+    <h1>C Language</h1>
+    <p>Programming fundamentals, syntax, and problem solving</p>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content">
+
+    <div class="card">
+      <h3>📘 Syllabus</h3>
+      <p>View the complete C Language syllabus and unit-wise topics.</p>
+      <a href="#">Open syllabus</a>
+    </div>
+
+    <div class="card">
+      <h3>📝 Notes</h3>
+      <p>Lecture notes and explanations in simple language.</p>
+      <a href="#">View notes</a>
+    </div>
+
+
+    <div class="card">
+      <h3>📄 Assignments</h3>
+      <p>Daily assignments and lab work questions.</p>
+      <a href="#">View assignments</a>
+    </div>
+
+
+
+  </section>
+
+  <footer>
+    © 2025 Cloud Notes | C Language
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Cloud Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, #f7c66a, transparent 60%),
+        radial-gradient(circle at top right, #f3a6c8, transparent 60%),
+        radial-gradient(circle at bottom left, #b8b3f0, transparent 60%),
+        radial-gradient(circle at bottom right, #f4b183, transparent 60%);
+      color: #111;
+    }
+
+    /* ===== NAVBAR (SAME AS OTHERS) ===== */
+    .navbar {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    .logo a {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: 0.6px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .navbar nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .navbar nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .nav-buttons a {
+      padding: 10px 18px;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 999px;
+    }
+
+    .btn-outline {
+      border: 1px solid #000;
+      color: #000;
+    }
+
+    .btn-solid {
+      background: #000;
+      color: #fff;
+    }
+
+    /* ===== HEADER ===== */
+    .page-header {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      margin-bottom: 12px;
+    }
+
+    .page-header p {
+      font-size: 18px;
+      color: #444;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* ===== ABOUT CONTENT ===== */
+    .about-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px 80px;
+      line-height: 1.7;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .about-section h2 {
+      margin-top: 40px;
+      margin-bottom: 12px;
+      font-size: 26px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">CloudNotes</a>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="plans.html">Plans</a>
+    </nav>
+
+    <div class="nav-buttons">
+      <a href="login.html" class="btn-outline">Login</a>
+      <a href="login.html" class="btn-solid">Get started free</a>
+    </div>
+  </header>
+
+  <!-- HEADER -->
+  <section class="page-header">
+    <h1>About CloudNotes</h1>
+    <p>
+      CloudNotes is a simple, student-focused platform designed to make
+      class notes easy to access, manage, and organize.
+    </p>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section class="about-section">
+    <p>
+      CloudNotes was created with one clear goal: to help students keep
+      all their academic notes in one secure and organized place.
+      Instead of searching through multiple apps or files, students can
+      access everything they need using a simple class-based login system.
+    </p>
+
+    <h2>Why CloudNotes?</h2>
+    <p>
+      Many students struggle with scattered notes, lost files, and
+      complicated login systems. CloudNotes solves this by providing
+      a clean interface, fast access, and a password-protected class
+      system that keeps notes secure and easy to share within a class.
+    </p>
+
+    <h2>Our Vision</h2>
+    <p>
+      The vision of CloudNotes is to become a reliable digital space for
+      students to store, access, and manage study materials efficiently.
+      The platform is designed to be expandable, allowing more classes
+      and features to be added in the future.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Cloud Notes | WebTech Project
+  </footer>
+
+</body>
+</html>
