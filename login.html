@@ -113,7 +113,14 @@
 
     <select id="classSelect">
       <option value="">Select your class</option>
+      <option value="CSE-A">CSE-A</option>
+      <option value="CSE-B">CSE-B</option>
+      <option value="CSE-C">CSE-C</option>
+      <option value="CSE-D">CSE-D</option>
       <option value="CSE-E">CSE-E</option>
+      <option value="CSE-F">CSE-F</option>
+
+    
     </select>
 
     <!-- CLASS PASSWORD -->
@@ -145,15 +152,28 @@
       return;
     }
 
-    const CSE_PASSWORD = "CSE2025";
+    // Normalize password input to avoid whitespace/case issues
+    const password = enteredPassword.trim().toUpperCase();
 
-    if (selectedClass === "CSE-E" && enteredPassword === CSE_PASSWORD) {
+    // Map classes to their expected password and target page
+    const classMap = {
+      "CSE-A": { pw: "CSEA", url: "cse-a.html" },
+      "CSE-B": { pw: "CSEB", url: "cse-b.html" },
+      "CSE-C": { pw: "CSEC", url: "cse-c.html" },
+      "CSE-D": { pw: "CSED", url: "cse-d.html" },
+      "CSE-E": { pw: "CSEE", url: "cse-e.html" },
+      "CSE-F": { pw: "CSEF", url: "cse-f.html" },
+    };
+
+    const entry = classMap[selectedClass];
+    if (entry && password === entry.pw) {
       localStorage.setItem("studentName", name);
-      window.location.href = "cse-e.html";
+      window.location.href = entry.url;
     } else {
       error.innerText = "Wrong class password";
     }
   }
+   
 </script>
 
 
